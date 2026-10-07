@@ -234,6 +234,7 @@
     document.querySelector("main").append(liveStatus);
     let language = "zh";
     let latestResult = null;
+    let hasNoMatch = false;
     let history = [];
 
     function t(key, values = {}) {
@@ -307,6 +308,12 @@
       document.querySelectorAll("[data-lang]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.lang === language)));
       [...minutesSelect.options].forEach((option) => { option.textContent = `${option.value} ${t("minutesUnit")}`; });
       if (latestResult) renderActivity(latestResult);
+      else if (hasNoMatch) {
+        resultContent.className = "result-empty no-match";
+        const message = document.createElement("p");
+        message.textContent = t("noMatch");
+        resultContent.replaceChildren(message);
+      }
       renderHistory();
     }
 
@@ -321,6 +328,7 @@
       );
       if (!matches.length) {
         latestResult = null;
+        hasNoMatch = true;
         resultContent.className = "result-empty no-match";
         const message = document.createElement("p");
         message.textContent = t("noMatch");
@@ -329,6 +337,7 @@
         return;
       }
       latestResult = matches[Math.floor(Math.random() * matches.length)];
+      hasNoMatch = false;
       history = [latestResult, ...history].slice(0, 5);
       renderActivity(latestResult);
       renderHistory();
