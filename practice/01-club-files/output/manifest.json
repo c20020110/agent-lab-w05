@@ -1,0 +1,62 @@
+[
+  {
+    "source": "input/announcement.txt",
+    "destination": "communications/announcement.txt",
+    "reason": "公告內容，與 announcement_copy.txt 相同；仍保留獨立副本。"
+  },
+  {
+    "source": "input/announcement_copy.txt",
+    "destination": "communications/announcement_copy.txt",
+    "reason": "公告副本，與 announcement.txt 內容相同；仍保留獨立副本。"
+  },
+  {
+    "source": "input/poster_text.txt",
+    "destination": "communications/poster_text.txt",
+    "reason": "宣傳海報文案，歸入公告與宣傳。"
+  },
+  {
+    "source": "input/meeting_notes.txt",
+    "destination": "planning/meeting_notes.txt",
+    "reason": "記錄下次會議要討論的活動方案。"
+  },
+  {
+    "source": "input/next_steps.txt",
+    "destination": "planning/next_steps.txt",
+    "reason": "列出比較提案的後續工作。"
+  },
+  {
+    "source": "input/proposal_final.txt",
+    "destination": "planning/proposal_final.txt",
+    "reason": "戶外活動提案 v1；與 proposal_final2.txt 內容不同，保留待討論。"
+  },
+  {
+    "source": "input/proposal_final2.txt",
+    "destination": "planning/proposal_final2.txt",
+    "reason": "室內活動提案 v2；與 proposal_final.txt 內容不同，保留待討論。"
+  },
+  {
+    "source": "input/rain_plan.txt",
+    "destination": "planning/rain_plan.txt",
+    "reason": "下雨時的替代方案討論事項，歸入活動規劃。"
+  },
+  {
+    "source": "input/budget_draft.txt",
+    "destination": "resources/budget_draft.txt",
+    "reason": "模擬紙張預算草案，歸入預算與器材。"
+  },
+  {
+    "source": "input/equipment_list.txt",
+    "destination": "resources/equipment_list.txt",
+    "reason": "器材清單，與 equipment_backup.txt 內容相同；仍保留獨立副本。"
+  },
+  {
+    "source": "input/equipment_backup.txt",
+    "destination": "resources/equipment_backup.txt",
+    "reason": "器材備份，與 equipment_list.txt 內容相同；仍保留獨立副本。"
+  },
+  {
+    "source": "input/feedback_questions.txt",
+    "destination": "feedback/feedback_questions.txt",
+    "reason": "活動回饋問題，歸入回饋資料。"
+  }
+]
